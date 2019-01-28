@@ -2,8 +2,9 @@
 ## 友盟推送cordova插件
 =====================
 
-在友盟管理平台注册android和ios应用
-安装插件：cordova plugin add cordova-plugin-upush
+在友盟管理平台注册android和ios应用.
+
+安装插件：cordova plugin add https://github.com/makiiii1111/cordova-plugin-upush
 
 ## android部分
 

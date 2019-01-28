@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-upush" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-upush</name>
+    <js-module name="cordova-plugin-upush" src="www/cordova-plugin-upush.js">
+        <clobbers target="Upush" />
+    </js-module>
+    <platform name="android">
+    		<config-file parent="/*" target="res/xml/config.xml">
+            	<feature name="Upush">
+                		<param name="android-package" value="com.umeng.plugin.UPush" />
+                		<param name="onload" value="true" />
+            	</feature>
+        	</config-file>
+        	<config-file parent="/*" target="AndroidManifest.xml">
+        	</config-file>
+        	<source-file src="src/android/UPush.java" target-dir="src/com/umeng/plugin" />        	  
+        <framework src="src/android/UPush.gradle" custom="true" type="gradleReference"/>
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Upush">
+                <param name="ios-package" value="UPush"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/UPush.h" />
+        <source-file src="src/ios/UPush.m" />
+        <framework src="src/ios/UMPush.framework" custom="true" />
+        
+        <framework src="UserNotifications.framework" />
+    </platform>
+</plugin>

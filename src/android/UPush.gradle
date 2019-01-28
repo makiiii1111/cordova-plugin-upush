@@ -1,0 +1,20 @@
+	repositories {
+		mavenCentral()
+	}
+dependencies {
+	compile 'com.umeng.sdk:common:1.5.3'
+	//compile 'com.umeng.sdk:utdid:1.1.5.3'
+	//PushSDK
+	compile 'com.umeng.sdk:push:4.2.0'
+  	compile 'com.alibaba:fastjson:1.1.54.android'
+}
+
+  android {
+
+    dexOptions {
+      javaMaxHeapSize "4g"
+    }
+    defaultConfig {
+      multiDexEnabled true
+    }
+  }

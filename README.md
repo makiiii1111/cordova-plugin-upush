@@ -53,9 +53,9 @@
 1. 在TARGETS -> Capabilities中，打开 Push Notifications . 在 Background Modes中的Remote Notifications前打钩
 2. 在AppDelegate.m中添加
 ```objectivec
-	  #import "UPush.h"
-    #import <UserNotifications/UserNotifications.h>
-    #import <UMPush/UMessage.h>
+	#import "UPush.h"
+    	#import <UserNotifications/UserNotifications.h>
+    	#import <UMPush/UMessage.h>
 	- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:		(NSDictionary*)launchOptions
 	{
     		
@@ -66,7 +66,7 @@
          //type是对推送的几个参数的选择，可以选择一个或者多个。默认是三个全部打开，即：声音，弹窗，角标等
          entity.types = UMessageAuthorizationOptionBadge|UMessageAuthorizationOptionAlert|UMessageAuthorizationOptionSound;
          //[UNUserNotificationCenter currentNotificationCenter].delegate = self;
-         [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity completionHandler:^(BOOL granted, NSError * _Nullable error) {
+         [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity completionHandler:^(BOOL granted, NSError 		* _Nullable error) {
             if (granted) {
             // 用户选择了接收Push消息
             }else{
